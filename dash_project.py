@@ -71,6 +71,7 @@ SLIDER_IDS = ["inpatient", "emergency", "meds", "time", "diagnoses", "labs"]
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 
+server = app.server
 
 # ── DMC Slider helper ─────────────────────────────────────────────────────────
 def dmc_slider(label, sid, min_, max_, value):
