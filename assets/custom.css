@@ -1,0 +1,138 @@
+/* ── page reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #_dash-app-content, #_dash-app-content > div {
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   DMC SLIDER  (replaces the old rc-slider rules)
+   These target Mantine v6 class names used by dash-mantine-components
+   ════════════════════════════════════════════════════════════ */
+
+.mantine-AppShell-root,
+[data-mantine-color-scheme],
+.m_b6d8b162 {          /* Mantine's internal body class */
+    background-color: #ffffff !important;
+}
+
+
+/* Unfilled (background) rail */
+.mantine-Slider-track::before {
+    background-color: #DDD5C8 !important;
+    border: 1.5px solid #C2B49A !important;
+    border-radius: 4px !important;
+    height: 6px !important;
+}
+
+/* Filled portion – default color; JS callback overrides this at runtime */
+.mantine-Slider-bar {
+    background-color: #4FA645 !important;   /* default: low-risk green */
+    height: 6px !important;
+    border-radius: 4px !important;
+    transition: background-color 0.4s ease !important;
+}
+
+/* Thumb handle */
+.mantine-Slider-thumb {
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #4FA645 !important;   /* overridden at runtime */
+    border: 2.5px solid rgba(0,0,0,0.25) !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25) !important;
+    transition: background-color 0.4s ease, border-color 0.4s ease !important;
+}
+
+/* Hover tooltip bubble */
+.mantine-Slider-label {
+    background-color: #4FA645 !important;   /* overridden at runtime */
+    color: #fff !important;
+    font-size: 12px !important;
+    border-radius: 4px !important;
+    transition: background-color 0.4s ease !important;
+}
+
+/* Remove Mantine's default focus ring on the thumb */
+.mantine-Slider-thumb:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(79, 166, 69, 0.35) !important;
+}
+
+/* ── thermometer bar ── */
+.thermo-bar {
+    width: 35px;
+    background: #dbd2c6;
+    border-radius: 18px 18px 0 0;
+    border: 2px solid #C2B49A;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+}
+.thermo-fill {
+    width: 100%;
+    border-radius: 0;
+    transition: height 0.5s ease, background 0.4s ease;
+}
+.thermo-bulb {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid #C2B49A;
+    margin-top: -2px;
+    flex-shrink: 0;
+    transition: background 0.4s ease;
+}
+
+/* ── pill badge ── */
+.pill {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+.pill-low      { background: #D4EDDA; color: #2D6A3F; }
+.pill-moderate { background: #FFF3CD; color: #7D5A00; }
+.pill-high     { background: #FADBD8; color: #922B21; }
+
+/* ── sidebar ──
+.sidebar {
+    width: 220px;
+    min-width: 180px;
+    background: #EFEAD9;
+    border-right: 1px solid #D9CFBE;
+    padding: 28px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.sidebar-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #9C8E77;
+    text-transform: uppercase;
+    margin: 14px 0 4px 0;
+}
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    color: #4A3B2A;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.sidebar-item:hover  { background: #E2D9C8; }
+.sidebar-item.active {
+    background: #D8CDB8;
+    font-weight: 600;
+    color: #2C2416;
+} */
